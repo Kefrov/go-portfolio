@@ -4,6 +4,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/Kefrov/go-portfolio/internal/handlers"
 )
 
 func main() {
@@ -14,10 +16,9 @@ func main() {
 
 	server := http.NewServeMux()
 
-	server.HandleFunc("/",
-		func(w http.ResponseWriter, r *http.Request) {
-			w.Write([]byte("Hello World!"))
-		})
+	fs := http.FileServer(http.Dir("public/static"))
+	server.Handle("/static/", http.StripPrefix("/static/", fs))
+	server.HandleFunc("/", handlers.HomeHandler)
 
 	log.Println("Server starting on port " + port)
 	err := http.ListenAndServe(":" + port, server)

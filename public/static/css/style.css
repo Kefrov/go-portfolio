@@ -42,6 +42,10 @@ body {
   color: #ff9900;
 }
 
+.nav-btn.active-btn {
+  color: #ff9900;
+}
+
 .home-container {
   display: flex;
   align-items: center;
@@ -112,4 +116,30 @@ body {
 
 .social-btn:hover {
   color: #ff9900;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+}
+
+.about-text {
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.about-image img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 50%;
+  height: auto;
 }

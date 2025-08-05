@@ -3,10 +3,10 @@
   <div class="nav-container">
     <div class="logo">FM.</div>
     <nav class="nav-links">
-      <a href="/" class="nav-btn">Home</a>
-      <a href="/about" class="nav-btn">About</a>
-      <a href="/projects" class="nav-btn">Projects</a>
-      <a href="/contact" class="nav-btn">Contact</a>
+      <a href="/" class="nav-btn {{- if eq .ActivePage 0 }} active-btn  {{- end }}">Home</a>
+      <a href="/about" class="nav-btn {{- if eq .ActivePage 1 }} active-btn  {{- end }}">About</a>
+      <a href="/projects" class="nav-btn {{- if eq .ActivePage 2 }} active-btn  {{- end }}">Projects</a>
+      <a href="/contact" class="nav-btn {{- if eq .ActivePage 3 }} active-btn  {{- end }}">Contact</a>
     </nav>
   </div>
 </header>

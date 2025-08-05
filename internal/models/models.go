@@ -1,3 +1,23 @@
 package models
 
-// Define data structures here
+// Home
+type Socials struct {
+	GitHub    string
+	LinkedIn  string
+	Instagram string
+}
+
+type HomeData struct {
+	ActivePage  int
+	Name        string
+	Surname     string
+	Subtitle    string
+	Description string
+	Socials     Socials
+}
+
+// About
+type AboutData struct {
+	ActivePage int
+	Paragraphs []string
+}

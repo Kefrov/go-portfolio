@@ -19,9 +19,10 @@ func main() {
 	fs := http.FileServer(http.Dir("public/static"))
 	server.Handle("/static/", http.StripPrefix("/static/", fs))
 	server.HandleFunc("/", handlers.HomeHandler)
+	server.HandleFunc("/about", handlers.AboutHandler)
 
 	log.Println("Server starting on port " + port)
-	err := http.ListenAndServe(":" + port, server)
+	err := http.ListenAndServe(":"+port, server)
 	if err != nil {
 		log.Fatalf("Error while starting the server: %v", err)
 	}

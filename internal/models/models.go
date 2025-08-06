@@ -21,3 +21,16 @@ type AboutData struct {
 	ActivePage int
 	Paragraphs []string
 }
+
+// Projects
+type Project struct {
+	Title       string
+	Url         string
+	Description string
+	ImagePath   string // aspect ratio should be 1:1
+}
+
+type ProjectsData struct {
+	ActivePage int
+	Projects   []Project
+}

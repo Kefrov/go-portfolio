@@ -20,6 +20,7 @@ func main() {
 	server.Handle("/static/", http.StripPrefix("/static/", fs))
 	server.HandleFunc("/", handlers.HomeHandler)
 	server.HandleFunc("/about", handlers.AboutHandler)
+	server.HandleFunc("/projects", handlers.ProjectsHandler)
 
 	log.Println("Server starting on port " + port)
 	err := http.ListenAndServe(":"+port, server)

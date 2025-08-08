@@ -144,6 +144,10 @@ body {
   height: auto;
 }
 
+.highlight {
+  color: #ff9900;
+}
+
 .projects-wrapper {
   max-width: 900px;
   margin: 0 auto;

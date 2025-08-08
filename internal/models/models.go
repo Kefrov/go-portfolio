@@ -1,5 +1,7 @@
 package models
 
+import "html/template"
+
 // Home
 type Socials struct {
 	GitHub    string
@@ -19,7 +21,7 @@ type HomeData struct {
 // About
 type AboutData struct {
 	ActivePage int
-	Paragraphs []string
+	Paragraphs []template.HTML
 }
 
 // Projects

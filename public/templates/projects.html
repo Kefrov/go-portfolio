@@ -1,20 +1,20 @@
 {{ define "content" }}
 <h1 class="page-title">My Projects</h1>
 <div class="projects-wrapper">
-  {{ range $i, $project := .Projects }}
+    {{ range $i, $project := .Projects }}
     <div class="project {{ if mod $i 2 }}reverse{{ end }}">
-      <div class="project-image">
-        <img src="{{ $project.ImagePath }}" alt="project image">
-      </div>
-      <div class="project-description">
-        <h2 class="project-title">
-          <a href="{{ $project.Url }}" target="_blank" rel="noopener noreferrer">
-            {{ $project.Title }}
-          </a>
-        </h2>
-        <p>{{ $project.Description }}</p>
-      </div>
+        <div class="project-image">
+            <img src="{{ $project.ImagePath }}" alt="project image">
+        </div>
+        <div class="project-description">
+            <h2 class="project-title">
+                <a href="{{ $project.Url }}" target="_blank" rel="noopener noreferrer">
+                    {{ $project.Title }}
+                </a>
+            </h2>
+            <p>{{ $project.Description }}</p>
+        </div>
     </div>
-  {{ end }}
+    {{ end }}
 </div>
 {{ end }}

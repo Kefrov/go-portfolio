@@ -1,13 +1,13 @@
 {{ define "content" }}
 <h1 class="page-title">About Me</h1>
 <section class="about-section">
-  <div class="about-text">
-    {{ range .Paragraphs }}
-      <p>{{ . }}</p>
-    {{ end }}
-  </div>
-  <div class="about-image">
-    <img src="/static/images/about.png" alt="About image">
-  </div>
+    <div class="about-text">
+        {{ range .Paragraphs }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
+    <div class="about-image">
+        <img src="/static/images/about.png" alt="About image">
+    </div>
 </section>
 {{ end }}

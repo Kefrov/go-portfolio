@@ -1,20 +1,20 @@
 {{ define "content" }}
 <section class="home-container">
-  <div class="home-text">
-    <p class="intro">Hello, my name is</p>
-    <p class="name">{{ .Name }} {{ .Surname }}.</p>
-    <p class="subtitle">{{ .Subtitle }}</p>
-    <p class="desc">{{ .Description }}</p>
-  </div>
-
-  <div class="home-image">
-    <img src="/static/images/pfp.jpg" alt="{{ .Name }} {{ .Surname }}" class="profile-pic" />
-  </div>
-
-  <div class="social-icons">
-    <a href="{{ .Socials.GitHub }}" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
-    <a href="{{ .Socials.LinkedIn }}" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
-    <a href="{{ .Socials.Instagram }}" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
-  </div>
+    <div class="home-text">
+        <p class="intro">Hello, my name is</p>
+        <p class="name">{{ .Name }} {{ .Surname }}.</p>
+        <p class="subtitle">{{ .Subtitle }}</p>
+        <p class="desc">{{ .Description }}</p>
+    </div>
+    
+    <div class="home-image">
+        <img src="/static/images/pfp.jpg" alt="{{ .Name }} {{ .Surname }}" class="profile-pic" />
+    </div>
+    
+    <div class="social-icons">
+        <a href="{{ .Socials.GitHub }}" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+        <a href="{{ .Socials.LinkedIn }}" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+        <a href="{{ .Socials.Instagram }}" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+    </div>
 </section>
 {{ end }}

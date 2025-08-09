@@ -11,6 +11,7 @@ import (
 )
 
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
+	// handles form submission
 	if r.Method == http.MethodPost {
 		err := r.ParseForm()
 		if err != nil {
@@ -26,6 +27,7 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
 		subject := fmt.Sprintf("Portfolio Contact from %s", name)
 		body := fmt.Sprintf("From: %s\nEmail: %s\n\nMessage:\n%s", name, email, message)
 
+		// create a mailto URL to open the user's email client
 		mailtoURL := fmt.Sprintf("mailto:%s?subject=%s&body=%s",
 			data.DataContact.Email,
 			url.PathEscape(subject),

@@ -21,6 +21,7 @@ func main() {
 	server.HandleFunc("/", handlers.HomeHandler)
 	server.HandleFunc("/about", handlers.AboutHandler)
 	server.HandleFunc("/projects", handlers.ProjectsHandler)
+	server.HandleFunc("/contact", handlers.ContactHandler)
 
 	log.Println("Server starting on port " + port)
 	err := http.ListenAndServe(":"+port, server)

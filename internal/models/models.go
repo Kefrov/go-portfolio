@@ -36,3 +36,10 @@ type ProjectsData struct {
 	ActivePage int
 	Projects   []Project
 }
+
+// Contact
+type ContactData struct {
+	ActivePage int
+	Email      string
+	Message    string
+}

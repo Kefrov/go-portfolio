@@ -1,4 +1,5 @@
 {{ define "content" }}
+<h1 class="page-title">My Projects</h1>
 <div class="projects-wrapper">
   {{ range $i, $project := .Projects }}
     <div class="project {{ if mod $i 2 }}reverse{{ end }}">

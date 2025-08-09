@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+/* Common */
 body {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
   background-color: #0e0e0e;
   color: white;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -46,13 +53,14 @@ body {
   color: #ff9900;
 }
 
+/* Home */
 .home-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 10rem;
   padding-right: 10rem;
-  padding-top: 5rem;
+  padding-top: 7rem;
   background-color: #0e0e0e;
   color: #555555;
 }
@@ -118,12 +126,13 @@ body {
   color: #ff9900;
 }
 
+/* About */
 .about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
   color: white;
+  margin-top: -1rem;
 }
 
 .about-text {
@@ -140,7 +149,7 @@ body {
 .about-image img {
   display: block;
   margin: 2rem auto;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -148,10 +157,11 @@ body {
   color: #ff9900;
 }
 
+/* Projects */
 .projects-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 4rem 4rem;
+  padding: 0 4rem 4rem 4rem;
 }
 
 .project {
@@ -201,4 +211,99 @@ body {
 
 .project-title a:hover {
   text-decoration: underline;
+}
+
+/* Contact */
+.contact-section {
+    max-width: 800px;
+    margin: -1rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.contact-email {
+    font-size: 2.5rem;
+    color: #ff9900;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.contact-email:hover {
+    color: #ff7700;
+}
+
+.contact-message {
+    color: #555555;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff9900;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555555;
+}
+
+.submit-btn {
+    background-color: transparent;
+    color: #ff9900;
+    border: 2px solid #ff9900;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    transition: all 0.3s;
+    float: right;
+}
+
+.submit-btn:hover {
+    background-color: #ff9900;
+    color: #0e0e0e;
 }
